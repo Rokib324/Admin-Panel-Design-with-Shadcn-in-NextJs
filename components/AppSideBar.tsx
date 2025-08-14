@@ -33,9 +33,10 @@ import React from 'react'
 import Link from "next/link";
 import Image from "next/image";
 import { Calendar, ChevronDown, ChevronUp, FolderPlus, Home, Inbox, LogOut, Plus, Projector, Search, Settings, User,} from "lucide-react";
-import { Sidebar, SidebarContent, SidebarFooter, SidebarGroup, SidebarGroupAction, SidebarGroupContent, SidebarGroupLabel, SidebarHeader, SidebarMenu, SidebarMenuBadge, SidebarMenuButton, SidebarMenuItem, SidebarSeparator } from "@/components/ui/sidebar";
+import { Sidebar, SidebarContent, SidebarFooter, SidebarGroup, SidebarGroupAction, SidebarGroupContent, SidebarGroupLabel, SidebarHeader, SidebarMenu, SidebarMenuBadge, SidebarMenuButton, SidebarMenuItem, SidebarMenuSub, SidebarMenuSubButton, SidebarMenuSubItem, SidebarSeparator } from "@/components/ui/sidebar";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "./ui/dropdown-menu";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "./ui/collapsible";
+
 
 const AppSideBar = () => {
   return (
@@ -130,6 +131,36 @@ const AppSideBar = () => {
               </CollapsibleContent>
             </SidebarGroup>
           </Collapsible>
+          {/* Nested Sidebar Group */}
+          <SidebarGroup>
+            <SidebarGroupLabel>
+              Nested Items
+            </SidebarGroupLabel>
+            <SidebarGroupContent>
+              <SidebarMenu>
+                <SidebarMenuItem>
+                  <SidebarMenuButton asChild>
+                    <Link href="#">
+                      <FolderPlus />
+                      <span>See All Projects</span>
+                    </Link>
+                  </SidebarMenuButton>
+                </SidebarMenuItem>
+                <SidebarMenuSub>
+                <SidebarMenuSubItem>
+                    <SidebarMenuSubButton asChild>
+                      <Link href="#"><Plus/> Add Projects</Link>
+                    </SidebarMenuSubButton>
+                  </SidebarMenuSubItem>
+                  <SidebarMenuSubItem>
+                    <SidebarMenuSubButton asChild>
+                      <Link href="#"><Plus/> Add Category</Link>
+                    </SidebarMenuSubButton>
+                  </SidebarMenuSubItem>
+                </SidebarMenuSub>
+              </SidebarMenu>
+            </SidebarGroupContent>
+          </SidebarGroup>
           
         </SidebarContent>
 
