@@ -33,9 +33,8 @@ import React from 'react'
 import Link from "next/link";
 import Image from "next/image";
 import { Calendar, ChevronDown, ChevronUp, FolderPlus, Home, Inbox, LogOut, Plus, Projector, Search, Settings, User,} from "lucide-react";
-import { Sidebar, SidebarContent, SidebarFooter, SidebarGroup, SidebarGroupAction, SidebarGroupContent, SidebarGroupLabel, SidebarHeader, SidebarMenu, SidebarMenuButton, SidebarMenuItem, SidebarSeparator } from "@/components/ui/sidebar";
+import { Sidebar, SidebarContent, SidebarFooter, SidebarGroup, SidebarGroupAction, SidebarGroupContent, SidebarGroupLabel, SidebarHeader, SidebarMenu, SidebarMenuBadge, SidebarMenuButton, SidebarMenuItem, SidebarSeparator } from "@/components/ui/sidebar";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "./ui/dropdown-menu";
-import { Button } from "./ui/button";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "./ui/collapsible";
 
 const AppSideBar = () => {
@@ -67,6 +66,9 @@ const AppSideBar = () => {
                     <SidebarMenuButton asChild>
                       <Link href={item.url}>{item.icon} {item.title}</Link>
                     </SidebarMenuButton>
+                    {item.title === "Inbox" && (
+                      <SidebarMenuBadge>23</SidebarMenuBadge>
+                    )}
                   </SidebarMenuItem>
                 ))}
               </SidebarMenu>
