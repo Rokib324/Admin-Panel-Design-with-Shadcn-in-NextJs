@@ -4,6 +4,8 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import AppSideBar from "@/components/AppSideBar";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
+import { SidebarProvider } from "@/components/ui/sidebar";
+import { cookies } from "next/headers";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,11 +22,14 @@ export const metadata: Metadata = {
   description: "Admin Panel Design by Shadcn in Next.js",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const cookieStore = await cookies()
+  const defaultOpen = cookieStore.get("sidebar_state")?.value === "true"
+
   return (
     <html lang="en" suppressHydrationWarning>
       <body
@@ -36,6 +41,7 @@ export default function RootLayout({
         enableSystem
         disableTransitionOnChange
         >
+          <SidebarProvider defaultOpen={defaultOpen}>
         <AppSideBar />
         <main className="w-full">
         <Navbar />
@@ -43,6 +49,7 @@ export default function RootLayout({
           {children}
         </div>
         </main>
+        </SidebarProvider>
         </ThemeProvider>
       </body>
     </html>
