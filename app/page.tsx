@@ -4,6 +4,7 @@ import AppAreaChart from "@/components/AppAreaChart";
 import AppPieChart from "@/components/AppPieChart";
 import Image from "next/image";
 import CardList from "@/components/CardList";
+import TodoList from "@/components/TodoList";
 
 export default function Home() {
   return (
@@ -11,7 +12,7 @@ export default function Home() {
       <div className="bg-primary-foreground p-4 rounded-lg lg:col-span-2 "><AppBarChart /></div>
       <div className="bg-primary-foreground p-4 rounded-lg "><CardList title="popular content" /></div>
       <div className="bg-primary-foreground p-4 rounded-lg "><AppPieChart /></div>
-      <div className="bg-primary-foreground p-4 rounded-lg ">Boxes</div>
+      <div className="bg-primary-foreground p-4 rounded-lg "><TodoList /></div>
       <div className="bg-primary-foreground p-4 rounded-lg lg:col-span-2"><AppAreaChart /></div>
       <div className="bg-primary-foreground p-4 rounded-lg "><CardList title="Latest Transactions" /></div>
     </div>

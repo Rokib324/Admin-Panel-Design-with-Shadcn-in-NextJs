@@ -77,7 +77,7 @@ const latestTransactions = [
 
 
 import React from 'react'
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from './ui/card';
+import { Card, CardContent, CardFooter,CardTitle } from './ui/card';
 import Image from 'next/image';
 import { Badge } from './ui/badge';
 
@@ -88,8 +88,8 @@ const list = title === "popular content" ? popularContent :latestTransactions
         <h1 className='text-lg font-medium mb-6'>{title}</h1>
         <div className='flex flex-col gap-2'>
             {list.map((item)=> (
-                <Card key={item.id} className='flex-row items-center justify-between gap-4 p-4'>
-                    <div className='w-12 h-12 rounded-sm relative overflow-hidden'>
+                <Card key={item.id} className='flex-row items-center justify-between gap-4 p-2'>
+                    <div className='w-10 h-10 rounded-sm relative overflow-hidden'>
                         <Image src={item.image} alt={item.title} fill className='object-cover' />
                     </div>
                     <CardContent className='flex-1 p-0'>
