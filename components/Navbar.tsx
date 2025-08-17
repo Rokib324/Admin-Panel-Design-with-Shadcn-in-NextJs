@@ -19,7 +19,7 @@ const Navbar = () => {
     const {theme, setTheme} = useTheme();
     const {toggleSidebar} = useSidebar();
   return (
-    <nav className='flex justify-between items-center p-4'>
+    <nav className='flex justify-between items-center p-4 sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60'>
         {/* Left */}
         {/* <Button variant="outline" onClick={toggleSidebar}>
         Custom Sidebar Trigger
