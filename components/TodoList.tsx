@@ -26,7 +26,7 @@ const TodoList = () => {
             </Button>
         </div>
         {/* Calendar */}
-        <div className='mt-4'>
+        <div className='mt-4 ml-1'>
         <Popover open={open} onOpenChange={setOpen}>
         <PopoverTrigger asChild>
             <Button variant='outline'>
