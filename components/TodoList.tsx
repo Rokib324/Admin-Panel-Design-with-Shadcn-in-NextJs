@@ -41,12 +41,12 @@ const TodoList = () => {
         </div>
 
         {/* list */}
-        <ScrollArea className='max-h-[400px] mt-4 overflow-y-auto'>
-            <div className='flex flex-col gap-4'>
+        <ScrollArea className='max-h-[300px] mt-4 overflow-y-auto'>
+        <div className='flex flex-col gap-2'>
             {/* List Items */}
         <Card className='p-4'>
         <div className='flex gap-4 items-center justify-between'>
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2">
         <Checkbox id="todo-1" />
         <label htmlFor="todo-1">Home/Landing page design</label>
       </div>
@@ -56,7 +56,8 @@ const TodoList = () => {
         </Button>
         </div>
         </div>
-
+        </Card>
+        <Card className='p-4'>
         <div className='flex gap-4 items-center justify-between'>
         <div className="flex items-center gap-3">
         <Checkbox id="todo-2" />
@@ -68,7 +69,9 @@ const TodoList = () => {
         </Button>
         </div>
         </div>
+        </Card>
 
+        <Card className='p-4'>  
         <div className='flex gap-4 items-center justify-between'>
         <div className="flex items-center gap-3">
         <Checkbox id="todo-3" />
@@ -80,7 +83,8 @@ const TodoList = () => {
         </Button>
         </div>
         </div>
-
+        </Card>
+        <Card className='p-4'>
         <div className='flex gap-4 items-center justify-between'>
         <div className="flex items-center gap-3">
         <Checkbox id="todo-4" />
@@ -92,7 +96,9 @@ const TodoList = () => {
         </Button>
         </div>
         </div>
+        </Card>
 
+        <Card className='p-4'>
         <div className='flex gap-4 items-center justify-between'>
         <div className="flex items-center gap-3">
         <Checkbox id="todo-5" />
@@ -104,9 +110,8 @@ const TodoList = () => {
         </Button>
         </div>
         </div>
-            </Card>
-            </div>
-            
+        </Card>
+        </div>
 
         </ScrollArea>
     </div>
