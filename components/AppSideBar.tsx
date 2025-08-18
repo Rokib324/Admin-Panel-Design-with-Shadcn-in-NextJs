@@ -32,7 +32,7 @@ const items = [
 import React from 'react'
 import Link from "next/link";
 import Image from "next/image";
-import { Calendar, ChevronDown, ChevronUp, FolderPlus, Home, Inbox, LogOut, Plus, Projector, Search, Settings, User,} from "lucide-react";
+import { Calendar, ChevronDown, ChevronUp, CreditCard, FolderPlus, Home, Inbox, LogOut, Plus, Projector, Search, Settings, User, UserPlus, Users,} from "lucide-react";
 import { Sidebar, SidebarContent, SidebarFooter, SidebarGroup, SidebarGroupAction, SidebarGroupContent, SidebarGroupLabel, SidebarHeader, SidebarMenu, SidebarMenuBadge, SidebarMenuButton, SidebarMenuItem, SidebarMenuSub, SidebarMenuSubButton, SidebarMenuSubItem, SidebarSeparator } from "@/components/ui/sidebar";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "./ui/dropdown-menu";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "./ui/collapsible";
@@ -105,24 +105,24 @@ const AppSideBar = () => {
           <Collapsible defaultOpen className='group/collapsible'>
             <SidebarGroup>
               <SidebarGroupLabel asChild>
-                <CollapsibleTrigger>Collapsable Group <ChevronDown className="ml-auto transition-transform group-data-[state=open]/collapsible:rotate-180" /></CollapsibleTrigger>
+                <CollapsibleTrigger>Payments <ChevronDown className="ml-auto transition-transform group-data-[state=open]/collapsible:rotate-180" /></CollapsibleTrigger>
               </SidebarGroupLabel>
               <CollapsibleContent>
                 <SidebarGroupContent>
                   <SidebarMenu>
                     <SidebarMenuItem>
                       <SidebarMenuButton asChild>
-                        <Link href="#">
-                          <Projector />
-                          <span>Existing Projects</span>
+                        <Link href="/payments">
+                          <Users />
+                          <span>Payments List</span>
                         </Link>
                       </SidebarMenuButton>
                     </SidebarMenuItem>
                     <SidebarMenuItem>
                       <SidebarMenuButton asChild>
-                        <Link href="#">
-                          <FolderPlus />
-                          <span>Create Project</span>
+                        <Link href="/payments">
+                          <CreditCard />
+                          <span>Add Payment</span>
                         </Link>
                       </SidebarMenuButton>
                     </SidebarMenuItem>

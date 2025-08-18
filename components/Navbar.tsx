@@ -58,7 +58,12 @@ const Navbar = () => {
             <DropdownMenuContent sideOffset={10}>
                 <DropdownMenuLabel>My Account</DropdownMenuLabel>
                 <DropdownMenuSeparator />
-                <DropdownMenuItem><User className='h-[1.2rem] w-[1.2rem] mr-2'/> Profile</DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                    <Link href="/users/1" className="flex items-center">
+                        <User className='h-[1.2rem] w-[1.2rem] mr-2'/>
+                        Profile
+                    </Link>
+                </DropdownMenuItem>
                 <DropdownMenuItem><Settings className='h-[1.2rem] w-[1.2rem] mr-2'/> Settings</DropdownMenuItem>
                 <DropdownMenuItem variant="destructive"><LogOut className='h-[1.2rem] w-[1.2rem] mr-2'/> Logout</DropdownMenuItem>
             </DropdownMenuContent>
